@@ -1,0 +1,13 @@
+aiohttp
+beautifulsoup4
+hachoir
+numpy
+Pillow
+pyrogram
+requests
+tgcrypto
+youtube-dl
+olefile
+lk21
+filetype
+tldextract
