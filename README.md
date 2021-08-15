@@ -35,6 +35,8 @@ For Devs:
 
 #### You can also tap the Deploy To Heroku button below to deploy straight to Heroku!
 
+- `UPDATE_CHANNEL` For Force Subscribe. Paste your Update channel USERNAME (without @)..
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/EHDTUBE75/FAST-URL-UPLOADER/tree/main)
 
 
