@@ -1,34 +1,77 @@
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
 class Translation(object):
-    START_TEXT = """Hi {},
-I'm FAST-URL-UPLOADER!
-You can upload HTTP/HTTPS direct link, Using this bot!
 
-/help for more details!"""
-    FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
-    SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
-URL | filename | username | password"""
-    DOWNLOAD_START = "Now Downloading.."
-    UPLOAD_START = "Now Uploading.."
-    RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 2GB due to Telegram API limitations."
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "Thanks for using @fasturluploaderbot)"
-    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds.\nUploaded in {} seconds.\n\n@fasturluploaderbot"
-    SAVED_CUSTOM_THUMB_NAIL = "Custom video / file thumbnail saved. This image will be used in the video / file."
-    DEL_ETED_CUSTOM_THUMB_NAIL = "✅ Custom thumbnail cleared succesfully."
-    CUSTOM_CAPTION_UL_FILE = "{}"
-    NO_VOID_FORMAT_FOUND = "ERROR...\n<b>YouTubeDL</b> said: {}"
-    HELP_USER = """How to Use Me? Follow These steps!
+    START_TEXT = """
+Hello {} , I'am a url to telegram file or media uploader bot with permanent thumbnail support.
+
+Made by @FayasNoushad
+"""
+    HELP_TEXT = """
+<b><u>Link to Media or File</u></b>
+➠ Send a link for upload to telegram file or media.
+
+<b><u>Set Thumbnail</u></b>
+➠ Send a photo to make it as permanent thumbnail.
+
+<b><u>Deleting Thumbnail</u></b>
+➠ Send /delthumb to deleting thumbnail.
+
+<b><u>Show Thumbnail</u></b>
+➠ Send /showthumb to view custom thumbnail.
+
+Made by @FayasNoushad
+"""
+    ABOUT_TEXT = """
+- **Bot :** `URL Uploader`
+- **Creator :** [Fayas](https://telegram.me/TheFayas)
+- **Channel :** [Fayas Noushad](https://telegram.me/FayasNoushad)
+- **Credits :** `Everyone in this journey`
+- **Source :** [Click here](https://github.com/FayasNoushad/URL-Uploader)
+- **Language :** [Python3](https://python.org)
+- **Library :** [Pyrogram v1.2.0](https://pyrogram.org)
+- **Server :** [Heroku](https://heroku.com)
+"""
+    START_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('Channel', url='https://telegram.me/FayasNoushad'),
+        InlineKeyboardButton('Feedback', url='https://telegram.me/TheFayas')
+        ],[
+        InlineKeyboardButton('Help', callback_data='help'),
+        InlineKeyboardButton('About', callback_data='about'),
+        InlineKeyboardButton('Close', callback_data='close')
+        ]]
+    )
+    HELP_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('Home', callback_data='home'),
+        InlineKeyboardButton('About', callback_data='about'),
+        InlineKeyboardButton('Close', callback_data='close')
+        ]]
+    )
+    ABOUT_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('Home', callback_data='home'),
+        InlineKeyboardButton('Help', callback_data='help'),
+        InlineKeyboardButton('Close', callback_data='close')
+        ]]
+    )
+    FORMAT_SELECTION = """<b>Select the desired format:</b> <a href='{}'>file size might be approximate</a>
     
-1. Send url (example.domain/File.mp4 | New Filename.mp4).
-2. Send Image As Custom Thumbnail (Optional).
-3. Select the button.
-   SVideo - Give File as video with Screenshots
-   DFile  - Give File (video) as file with Screenshots
-   Video  - Give File as video without Screenshots
-   File   - Give File without Screenshots
-
-If bot didn't respond, contact @Emrex3"""
-    REPLY_TO_MEDIA_ALBUM_TO_GEN_THUMB = "Reply /genthumbnail to a media album, to generate custom thumbnail"
-    ERR_ONLY_TWO_MEDIA_IN_ALBUM = "Media Album should contain only two photos. Please re-send the media album, and then try again, or send only two photos in an album."
-    CANCEL_STR = "Process Cancelled"
-    ZIP_UPLOADED_STR = "Uploaded {} files in {} seconds"
+Send your custum thumbnail if required.
+You can use /delthumb to delete the auto-generated thumbnail."""
+    CHECKING_LINK = "<code>Analysing Your Link</code>⏳"
+    BANNED_USER_TEXT = "<code>You are Banned!</code>"
+    SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
+URL | newfilename | username | password"""
+    DOWNLOAD_START = "<code>Downloading To My server Please Wait...</code>"    
+    UPLOAD_START = "<code>Uploading into Telegram...</code>"
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \n\nUploaded in {} seconds."
+    RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.95GB due to Telegram API limitations."
+    CUSTOM_CAPTION_UL_FILE = "<b>Join :-</b> @FayasNoushad"
     SLOW_URL_DECED = "Gosh that seems to be a very slow URL. Since you were screwing my home, I am in no mood to download this file. Meanwhile, why don't you try this:==> https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
+    NO_VOID_FORMAT_FOUND = "<code>{}</code>"
+    REPORT_SITE_TEXT = "<code>Sorry not uploading in this site here because this site is reporting site.</code>"
+    SOMETHING_WRONG = "<code>Something Wrong. Try again.</code>"
+    FORCE_SUBSCRIBE_TEXT = "<code>Sorry Dear You Must Join My Updates Channel for using me 😌😉....</code>"
+    FREE_USER_LIMIT_Q_SZE = "Sorry Friend, Free users can only 1 request per {} minutes. Please try again after {} seconds later."
