@@ -34,13 +34,12 @@ For Devs:
 [![Channel](https://img.shields.io/badge/TG-Channel-30302f?style=flat&logo=telegram)](https://t.me/large_software_storage_center)
 [![Group](https://img.shields.io/badge/TG-Group-30302f?style=flat&logo=telegram)](https://t.me/Large_software_storage_centerHD)
 
-## Credits, and Thanks to:
+## ❤️👉 Our Others Platforms 👀👥:
 
-* [@TGExplore](https://t.me/ViruZs) for his [TG-URL-Uploader](https://github.com/TGExplore/TG-URL-Uploader)
-* [@SpEcHlDe](https://t.me/ThankTelegram) for his [AnyDLBot](https://telegram.dog/AnyDLBot)
-* [Dan Tès](https://t.me/haskell) for his [Pyrogram Library](https://github.com/pyrogram/pyrogram)
-* [Yoily](https://t.me/YoilyL) for his [UploaditBot](https://telegram.dog/UploaditBot)
-
+* [YouTube](https://www.youtube.com/c/EHDTube) 
+* [Telegram channel](https://telegram.me/large_software_storage_center)
+* [Telegram software pc and android bot](https://t.me/EHD_TUBE_BOT?start=ar6874332234) 
+* [Telegram URL Uploader bot](https://t.me/fasturluploaderbot) 
 ### Installation
 
 #### The Easy Way
@@ -48,7 +47,3 @@ For Devs:
 #### You can also tap the Deploy To Heroku button below to deploy straight to Heroku!
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/EHDTUBE75/FAST-URL-UPLOADER/tree/main)
-
-
-#### LICENSE
-- GPLv3
