@@ -1,59 +1,78 @@
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
 class Translation(object):
 
-    START_TEXT = """Hello,
+    START_TEXT = """
+Hello {} , I'am a simple URL to Video Downloader to telegram bot with permanent thumbnail support.
 
-This is a Telegram URL Upload Bot Created by the <b>team Closeup! </b>
-Our dream is to help achieve the ordinary telegram users to get benefit of the telegram'service
-Join our support group for any Doubts and complaints 
-
-<b>Please send me any Direct download URL link, I can upload to telegram as File/Video</b>
-
-/help for more details..
-
-Support Group : @cpbotsupport
+Made by @JAsuran123
 """
+    HELP_TEXT = """
+<b><u>Link to Media or File</u></b>
+➠ Send a youtube video link for upload to telegram file or media.
 
-    HELP_USER = """Hai I'am a URL Uploader bot..
-    
-1. Send url (Link | New Name with Extension).
-2. Send Custom Thumbnail (Optional).
-3. Select the button.
-   SVideo - Give File as video with Screenshots
-   DFile  - Give File with Screenshots
-   Video  - Give File as video without Screenshots
-   DFile  - Give File without Screenshots
+<b><u>Set Thumbnail</u></b>
+➠ Send a photo to make it as permanent thumbnail.
 
-Support Group : @cpbotsupport
+<b><u>Deleting Thumbnail</u></b>
+➠ Send /delthumb to deleting thumbnail.
+
+<b><u>Show Thumbnail</u></b>
+➠ Send /showthumb to view custom thumbnail.
+
+Made by @JAsuran123
 """
-
-    FORMAT_SELECTION = """Select the desired format: <a href='{}'>file size might be approximate</a>
+    ABOUT_TEXT = """
+- **Bot :** `YouTube Downloader`
+- **Creator :** [JAsuran](https://telegram.me/JAsuran123)
+- **Channel :** [SerialCoIn](https://telegram.me/SerialCoIn)
+- **Credits :** `Everyone in this journey`
+- **Source :** [Click here](https://github.com/AsuranJ/urluploader2.0)
+- **Language :** [Python3](https://python.org)
+- **Library :** [Pyrogram v1.2.0](https://pyrogram.org)
+- **Server :** [Heroku](https://heroku.com)
+"""
+    START_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('Channel', url='https://telegram.me/Serialcoin'),
+        InlineKeyboardButton('Feedback', url='https://telegram.me/JAsuran123')
+        ],[
+        InlineKeyboardButton('Help', callback_data='help'),
+        InlineKeyboardButton('About', callback_data='about'),
+        InlineKeyboardButton('Close', callback_data='close')
+        ]]
+    )
+    HELP_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('Home', callback_data='home'),
+        InlineKeyboardButton('About', callback_data='about'),
+        InlineKeyboardButton('Close', callback_data='close')
+        ]]
+    )
+    ABOUT_BUTTONS = InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('Home', callback_data='home'),
+        InlineKeyboardButton('Help', callback_data='help'),
+        InlineKeyboardButton('Close', callback_data='close')
+        ]]
+    )
+    BLOCK_LIST_TEXT = "This url is blocked so I can not upload this URL.\n\nUse Any Other URL Bots"
+    FORMAT_SELECTION = """<b>Select the desired format:</b> <a href='{}'>file size might be approximate</a>
     
 Send your custum thumbnail if required.
-You can use /deletethumbnail to delete the auto-generated thumbnail."""
-    
+You can use /delthumb to delete the auto-generated thumbnail."""
+    CHECKING_LINK = "<code>Analysing Your Link</code>⏳"
+    BANNED_USER_TEXT = "<code>You are Banned!</code>"
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format:
 URL | newfilename | username | password"""
-
-
-    
-    DOWNLOAD_START = "Trying to download your file..."
-    
-    UPLOAD_START = "Uploading now.."
-    
+    DOWNLOAD_START = "<code>Downloading To My server Please Wait...</code>"    
+    UPLOAD_START = "<code>Uploading into Telegram...</code>"
     AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \n\nUploaded in {} seconds."
-
-    RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.95GB due to Telegram API limitations. I can't do anything about this. The limit is set by Telegram Not me.....😣😌"
-
-    SAVED_CUSTOM_THUMB_NAIL = "Custom thumbnail saved. This will be permanent.\n\nUse /deletethumbnail to clear it."
-
-    DEL_ETED_CUSTOM_THUMB_NAIL = "Custom thumbnail cleared succesfully."
-
-    CUSTOM_CAPTION_UL_FILE = " "
-
+    RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.95GB due to Telegram API limitations."
+    CUSTOM_CAPTION_UL_FILE = "<b>Join :-</b> @JAsuran123"
     SLOW_URL_DECED = "Gosh that seems to be a very slow URL. Since you were screwing my home, I am in no mood to download this file. Meanwhile, why don't you try this:==> https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
-
-    NO_VOID_FORMAT_FOUND = "ERROR...\n<b>YouTubeDL</b> said: {}"
-    
-    SHOW_THUMB = "Use /deletethumbnail to clear this thumbnail."
-    
-    NO_THUMB = "No saved thumbnails Found!!\n\nSend an image to save it as your thumbnail permanently."    
+    NO_VOID_FORMAT_FOUND = "<code>{}</code>"
+    REPORT_SITE_TEXT = "<code>Sorry not uploading in this site here because this site is reporting site.</code>"
+    SOMETHING_WRONG = "<code>Something Wrong. Try again.</code>"
+    FORCE_SUBSCRIBE_TEXT = "<code>Sorry Dear You Must Join My Updates Channel for using me 😌😉....</code>"
+    FREE_USER_LIMIT_Q_SZE = "Sorry Friend, Free users can only 1 request per {} minutes. Please try again after {} seconds later."
